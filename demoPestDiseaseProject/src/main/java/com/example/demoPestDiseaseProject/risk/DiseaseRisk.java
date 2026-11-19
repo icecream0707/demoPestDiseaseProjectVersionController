@@ -47,4 +47,8 @@ public class DiseaseRisk {
     /** 판단 기준 시각 (수집 회차의 정시) */
     @Column(nullable = false)
     private LocalDateTime calculatedAt;
+
+    /** 노지재배시기인지(1) 아닌지(0) */
+    @Column(name = "in_season", nullable = false, columnDefinition = "TINYINT(1) DEFAULT 0")
+    private boolean inSeason = false;
 }
